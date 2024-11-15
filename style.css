@@ -1,5 +1,6 @@
 .grid-container{
     color: var(--t-color);
+    background-color: var(--b-color);
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -14,6 +15,11 @@
 
 header{
     grid-area: head;
+    color: #542245;
+    font-size: 250%;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
 }
 
 .nav{
@@ -26,16 +32,17 @@ header{
     margin: 0;
     background-color: var(--s-color);
     overflow: hidden;
+    font-size: 160%;
 }
 
 .nav a{
     color: var(--t-color);
     text-decoration: none;
-    padding: 10px;
+    padding: 20px;
 }
 
 .nav a:hover{
-    background-color: #1265aa;
+    background-color: #501123;
     transition: 0.5s;
 }
 
@@ -45,10 +52,52 @@ header{
 
 main{
     grid-area: main;
+    background-color: var(--p-color);
+    padding: 12px;
+}
+
+#nyheter{
+    display: flex;
+    justify-content: center;
 }
 
 aside{
     grid-area: side;
+    padding-left: 20px;
+    color: #333;
+}
+
+table{
+    border-spacing: 0;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+td{
+    padding: 20px;
+}
+
+tbody td:nth-child(2){
+    text-align: center;
+}
+
+td, th{
+    border: 1px solid var(--a-color);
+}
+
+thead{
+    background-color: #a91010;
+    color: #ecf0f1;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #2b19a6;
+    color: var(--t-color);
+}
+
+tbody tr:nth-child(even){
+    background-color: #c92020;
+    color: var(--t-color);
 }
 
 footer{
@@ -56,11 +105,11 @@ footer{
 }
 
 :root{
-    --p-color: #2e4053;
-    --s-color: #3498db;
-    --a-color: #e74c3c;
+    --p-color: #2b19a6; /*Barcelona färger*/
+    --s-color: #722143;
+    --a-color: #b7b52a;
     --b-color: #ecf0f1;
-    --t-color: #2c3e50;
+    --t-color: #ddd;
 }
 
 @media (max-width:650px) {
