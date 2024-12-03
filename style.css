@@ -21,6 +21,11 @@
     border: 2px solid var(--a-color);
 }
 
+#aside2{
+    visibility: hidden;
+    display: none;
+}
+
 #footerH{
     grid-area: footerH;
     background-color: var(--s-color);
@@ -299,6 +304,8 @@ footer{
         background-color: var(--s-color);
         padding: 5px;
         border: 2px solid var(--s-color);
+        visibility: visible;
+        display: block;
     }
 
     #mainH{
