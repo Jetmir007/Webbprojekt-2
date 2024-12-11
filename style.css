@@ -1,3 +1,7 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .grid-container{
     color: var(--t-color);
     background-color: var(--b-color);
@@ -131,6 +135,7 @@ h3{
     background-color: var(--s-color);
     overflow: hidden;
     font-size: 160%;
+
 }
 
 .nav a{
@@ -152,7 +157,6 @@ h3{
     grid-area: main;
     background-color: var(--p-color);
     padding: 12px;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 101%;
     ::selection{
         background-color: #0f0f62;
@@ -277,7 +281,7 @@ footer{
     box-shadow: 3px 3px 2px var(--s-color);
 }
 
-@media (max-width:768px) {
+@media (max-width:600px) {
     .grid-container{
         display: grid;
         height: 100vh;
