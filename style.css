@@ -1,3 +1,7 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .grid-container{
     color: var(--t-color);
     background-color: var(--b-color);
@@ -64,6 +68,16 @@ h4{
     justify-content: center;
 }
 
+#aside2{
+    visibility: hidden;
+    display: none;
+}
+
+#mainH{
+    visibility: hidden;
+    display: none;
+}
+
 .content{
     grid-area: content;
     display: grid;
@@ -94,11 +108,17 @@ h4{
     max-height: 150px;
 }
 
-#logga{
+.logga{
     background-color: transparent;
-    height: 100px;
+    max-height: 100px;
     float: right;
-    margin-left: 75%;
+    transition-duration: 250ms;
+    margin-left: auto;
+}
+
+.logga:hover{
+    transform: translate(-3px, -3px);
+    box-shadow: 3px 3px  5px var(--p-color), 6px 6px 10px var(--b-color);
 }
 
 h3{
@@ -120,6 +140,7 @@ h3{
     background-color: var(--s-color);
     overflow: hidden;
     font-size: 160%;
+
 }
 
 .nav a{
@@ -141,7 +162,6 @@ h3{
     grid-area: main;
     background-color: var(--p-color);
     padding: 12px;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 101%;
     ::selection{
         background-color: #0f0f62;
@@ -262,9 +282,11 @@ footer{
 #formular input[type=submit]:hover{
     background-color: var(--a-color);
     transition: 0.5s;
+    transform: translate(-4px, -4px);
+    box-shadow: 3px 3px 2px var(--s-color);
 }
 
-@media (max-width:768px) {
+@media (max-width:600px) {
     .grid-container{
         display: grid;
         height: 100vh;
@@ -283,7 +305,7 @@ footer{
         height: 100vh;
         width: 99vw;
         grid-template-columns: 1% 1fr 1%;
-        grid-template-rows: minmax(100px, auto);
+        grid-template-rows: repeat(5, auto);
         grid-template-areas: 
         ". head ."
         ". nav ."
@@ -313,6 +335,12 @@ footer{
         background-color: var(--p-color);
         border: 2px solid var(--a-color);
         padding: 5px;
+        visibility: visible;
+        display: block;
+    }
+
+    #header{
+        height: 80px;
     }
 
     h6{
